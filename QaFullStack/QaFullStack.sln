@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaFullStack", "QaFullStack.csproj", "{553EEAB0-C0BC-40C0-BBD0-EA9231F435C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaFullStack", "QaFullStack.csproj", "{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{553EEAB0-C0BC-40C0-BBD0-EA9231F435C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{553EEAB0-C0BC-40C0-BBD0-EA9231F435C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{553EEAB0-C0BC-40C0-BBD0-EA9231F435C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{553EEAB0-C0BC-40C0-BBD0-EA9231F435C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D92C4446-BD89-4C14-A115-1DFD55DBD5C4}
+		SolutionGuid = {1004D64D-9A0D-42D5-B2B9-36BB4306B4C1}
 	EndGlobalSection
 EndGlobal
