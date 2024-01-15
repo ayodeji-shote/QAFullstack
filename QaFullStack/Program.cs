@@ -12,8 +12,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-<<<<<<< HEAD
-
 builder.Services.AddDbContext<EstateDBContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("EstateAgentAppCon")));
 
@@ -24,9 +22,8 @@ options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoop
 // Add services to the container.
 var app = builder.Build();
 
-
 app.UseCors(c => c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-=======
+
 builder.Services.AddDbContext<EstateDBContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("EstateAgentAppCon")));
@@ -38,7 +35,7 @@ options.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHa
 var app = builder.Build();
 
 app.UseCors(c=>c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
->>>>>>> ec121d4b8fc53ec4e857893a56b7919d17583d9f
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
