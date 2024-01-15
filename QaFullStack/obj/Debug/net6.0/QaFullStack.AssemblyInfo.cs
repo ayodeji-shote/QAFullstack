@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QaFullStack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+828845f87a793e21ec23fd987b215355c3077c54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab76bf61ca7ea32c9f2fc96f49ef6e1bdb73886d")]
 [assembly: System.Reflection.AssemblyProductAttribute("QaFullStack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QaFullStack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
