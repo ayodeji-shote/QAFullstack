@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using QaFullStack.Model;
 
+//create the builder object
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,28 +14,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EstateDBContext>(options =>
-	options.UseSqlServer(builder.Configuration.GetConnectionString("EstateAgentAppCon")));
+	options.UseSqlServer(
+		builder.Configuration.GetConnectionString("EstateAgentAppCon2")));
 
-//json selializer
+// json serializer
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore).AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver());
+
 
 // Add services to the container.
 var app = builder.Build();
 
+// Add services to the container.
 app.UseCors(c => c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
-builder.Services.AddDbContext<EstateDBContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("EstateAgentAppCon")));
-
-// json serializer
-builder.Services.AddControllers().AddNewtonsoftJson(options=>
-options.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore).AddNewtonsoftJson(options=>options.SerializerSettings.ContractResolver=new Newtonsoft.Json.Serialization.DefaultContractResolver());
-
-var app = builder.Build();
-
-app.UseCors(c=>c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
