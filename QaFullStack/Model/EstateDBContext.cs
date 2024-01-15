@@ -1,7 +1,6 @@
 ﻿// https://www.youtube.com/watch?v=NemyDIUcC64&list=PLjC4UKOOcfDSA06HsjJK4ZBr1tnPaOOpq youtube video that was helping
 using Microsoft.EntityFrameworkCore;
-using QaFullStack.Model;
-namespace QaFullStack.EF
+namespace QaFullStack.Model
 
 {
 	public class EstateDBContext : DbContext
