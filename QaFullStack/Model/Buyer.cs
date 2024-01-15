@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaFullStack.Model
 {
+    [Table("BUYER")]
     public class Buyer
     {
         [Key]
