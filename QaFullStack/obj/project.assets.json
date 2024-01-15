@@ -10853,19 +10853,36 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\User\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> f8c8d1e3c17eb0bc5cc4f19c5e1b07c585c0d53a
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\User\\Documents\\QaFullStack\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
       "projectName": "QaFullStack",
       "projectPath": "C:\\Users\\User\\Documents\\QaFullStack\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Documents\\QaFullStack\\QAFullstack\\QaFullStack\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
+      "projectName": "QaFullStack",
+      "projectPath": "C:\\Users\\User\\source\\repos\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\QAFullstack\\QaFullStack\\obj\\",
+>>>>>>> f8c8d1e3c17eb0bc5cc4f19c5e1b07c585c0d53a
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+=======
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> f8c8d1e3c17eb0bc5cc4f19c5e1b07c585c0d53a
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10873,6 +10890,10 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+        "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> f8c8d1e3c17eb0bc5cc4f19c5e1b07c585c0d53a
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
