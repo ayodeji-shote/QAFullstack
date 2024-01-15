@@ -9,7 +9,6 @@ namespace QaFullStack.Model
     {
         [Key]
         [Column("BUYER_ID")]
-        [Required]
         public int Id { get; set; }
         [Column(TypeName = "nvarchar(255)")]
         [Required]
