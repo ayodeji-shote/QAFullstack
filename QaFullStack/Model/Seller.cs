@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaFullStack.Model
 {
+    [Table("SELLER")]
     public class Seller
     {
         [Key]

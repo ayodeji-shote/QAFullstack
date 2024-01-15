@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaFullStack.Model
 {
+    [Table("BOOKING")]
     public class Booking
     {
         [Key]
