@@ -35,7 +35,7 @@ namespace QaFullStack.Controllers
 		[HttpGet]
 		[Route("GetSellers")]
 		// GET:SellerController
-		public ActionResult<IEnumerable<Seller>> Index()
+		public ActionResult<IEnumerable<Seller>> GetSellers()
 		{
 			var sellers = _dBContext.Sellers;
 			return sellers;
@@ -67,7 +67,7 @@ namespace QaFullStack.Controllers
 		[HttpPost]
 		[Route("CreateSeller")]
 		// POST: SellerController/Create
-		public ActionResult Create([FromBody] Seller seller)
+		public ActionResult CreateSeller([FromBody] Seller seller)
 		{
 			if (ModelState.IsValid)
 			{
@@ -81,7 +81,7 @@ namespace QaFullStack.Controllers
 		[HttpPut]
 		[Route("UpdateSeller/{id}")]
 		// PUT: SellerController/Edit
-		public ActionResult Update(int id, [FromBody] Seller seller)
+		public ActionResult UpdateSeller(int id, [FromBody] Seller seller)
 		{
 			if (ModelState.IsValid)
 			{
@@ -92,6 +92,20 @@ namespace QaFullStack.Controllers
 			return BadRequest(ModelState);
 		}
 
+		[HttpDelete]
+		[Route("DeleteSeller/{id}")]
+		// DELETE: SellerController/Delete
+		public ActionResult DeleteSeller(int id)
+		{
+			var seller = _dBContext.Sellers.Find(id);
+			if (seller == null)
+			{
+				return NotFound();
+			}
+			_dBContext.Sellers.Remove(seller);
+			_dBContext.SaveChanges();
+			return new JsonResult("Seller deleted successfully");
+		}
 
 		/*		
 		[HttpGet]
