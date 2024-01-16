@@ -1,4 +1,9 @@
-﻿using QaFullStack.Model;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using QaFullStack.Model;
 using System.Linq.Expressions;
 namespace QaFullStack.Repositories
 {
@@ -9,9 +14,9 @@ namespace QaFullStack.Repositories
     // The Controllers are used to define the methods that will be used in the API
     // The API is used to define the methods that will be used in the Front End
     // The Front End is used to define the methods that will be used by the user
-    public interface IRepositoryBase<T> where T : class
+    public interface IRepositoryBase<T> where T : EntityBase
     {
-        IEnumerable<T> FindAll();
+        IQueryable<T> FindAll();
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression);
         T FindById(int id);
         T Create(T entity);

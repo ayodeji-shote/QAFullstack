@@ -1,16 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using QaFullStack.EF;
 using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PropertyAPIController : ControllerBase
+    public class PropertyController : ControllerBase
     {
         private readonly EstateDBContext _dbContext;
 
-        public PropertyAPIController(EstateDBContext dbContext)
+        public PropertyController(EstateDBContext dbContext)
         {
             _dbContext = dbContext;
         }

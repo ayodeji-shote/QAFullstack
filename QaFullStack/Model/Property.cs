@@ -1,15 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using QaFullStack.Repositories;
 
 namespace QaFullStack.Model
 {
     [Table("PROPERTY")]
-    public class Property
+    public class Property : EntityBase
     {
         [Key]
         [Column("PROPERTY_ID")]
         [Required]
-        public int Id { get; set; }
+        public override int Id { get; set; }
         [Column(TypeName = "nvarchar(255)")]
         [Required]
         public string? ADDRESS { get; set; }

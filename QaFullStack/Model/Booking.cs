@@ -1,15 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using QaFullStack.Repositories;
 
 namespace QaFullStack.Model
 {
 	[Table("BOOKING")]
-	public class Booking
-	{
+	public class Booking : EntityBase
+    {
 		[Key]
 		[Required]
-		public int BOOKING_ID { get; set; }
-
+        [Column("BOOKING_ID")]
+        public override int Id { get; set; }
 		[ForeignKey("BUYER_ID")]
 		[Required]
 		public int? BUYER_ID { get; set; }

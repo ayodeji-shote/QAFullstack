@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using QaFullStack.Model;
+using QaFullStack.EF;
 
 var builder = WebApplication.CreateBuilder(args);
 
