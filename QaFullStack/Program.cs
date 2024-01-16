@@ -12,8 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EstateDBContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("EstateAgentAppCon")));
+	options.UseSqlServer(
+		builder.Configuration.GetConnectionString("EstateAgentAppCon2")));
 
 var app = builder.Build();
 
@@ -22,8 +22,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+	app.UseSwagger();
+	app.UseSwaggerUI();
 }
 
 app.UseAuthorization();
