@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaFullStack.Model
 {
+    [Table("PROPERTY")]
     public class Property
     {
         [Key]
