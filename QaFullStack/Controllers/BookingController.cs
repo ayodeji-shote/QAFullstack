@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using QaFullStack.EF;
 using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
-	/// <summary>
-	/// BookingController class logic
-	/// </summary>
-	public class BookingController : Controller
+    /// <summary>
+    /// BookingController class logic
+    /// </summary>
+    public class BookingController : Controller
 	{
 		#region Fieleds
 		/// <summary>
@@ -66,7 +67,7 @@ namespace QaFullStack.Controllers
 		{
 			_dBContext.Bookings.Add(booking);
 			_dBContext.SaveChanges();
-			return CreatedAtAction(nameof(GetBooking), new { id = booking.BOOKING_ID }, booking);
+			return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
 		}
 
 		/// <summary>
@@ -77,7 +78,7 @@ namespace QaFullStack.Controllers
 		// PUT:BookingController/Edit
 		public ActionResult UpdateBooking(int id, [FromBody] Booking booking)
 		{
-			if (id != booking.BOOKING_ID)
+			if (id != booking.Id)
 			{
 				return BadRequest();
 			}
