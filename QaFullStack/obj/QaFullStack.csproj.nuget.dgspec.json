@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\User\\Documents\\QaFullStack\\QAFullstack\\QaFullStack\\QaFullStack.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\User\\Documents\\QaFullStack\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\Documents\\QaFullStack\\QAFullstack\\QaFullStack\\obj\\",
+=======
+    "C:\\backend\\QAFullstack\\QaFullStack\\QaFullStack.csproj": {}
+  },
+  "projects": {
+    "C:\\backend\\QAFullstack\\QaFullStack\\QaFullStack.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\backend\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
+        "projectName": "QaFullStack",
+        "projectPath": "C:\\backend\\QAFullstack\\QaFullStack\\QaFullStack.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\backend\\QAFullstack\\QaFullStack\\obj\\",
+>>>>>>> 61907817172a741ace3454c1c9aca50b4db9dfe0
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
