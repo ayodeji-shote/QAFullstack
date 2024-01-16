@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using QaFullStack.EF;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,9 +13,23 @@ builder.Services.AddDbContext<EstateDBContext>(options =>
 	options.UseSqlServer(
 		builder.Configuration.GetConnectionString("EstateAgentAppCon2")));
 
+// Cors allows client requests to be made from same (localhost) machine
+string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+		{   //policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+			policy.WithOrigins("http://localhost:3001").AllowAnyHeader().AllowAnyMethod();
+		});
+});
+
+//create a static port for the API https://stackoverflow.com/questions/70332897/how-to-change-default-port-no-of-my-net-core-6-api
+//builder.WebHost.UseUrls();
+
 var app = builder.Build();
 
-
+//the thing to add cors
+app.UseCors(MyAllowSpecificOrigins);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
