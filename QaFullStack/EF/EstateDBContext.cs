@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-namespace QaFullStack.Model
+using QaFullStack.Model;
+namespace QaFullStack.EF
 {
-    public class EstateDBContext :DbContext
+    public class EstateDBContext : DbContext
     {
         // https://www.youtube.com/watch?v=NemyDIUcC64&list=PLjC4UKOOcfDSA06HsjJK4ZBr1tnPaOOpq youtube video that was helping
         public EstateDBContext(DbContextOptions<EstateDBContext> options) : base(options)

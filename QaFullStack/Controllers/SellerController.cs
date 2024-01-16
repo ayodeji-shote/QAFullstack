@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using QaFullStack.EF;
 using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
-	/// <summary>
-	/// SellerController class logic
-	/// </summary>
-	public class SellerController : ControllerBase
+    /// <summary>
+    /// SellerController class logic
+    /// </summary>
+    public class SellerController : ControllerBase
 	{
 		#region Fieleds
 		/// <summary>
