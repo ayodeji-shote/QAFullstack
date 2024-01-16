@@ -9,19 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QaFullStack
 build_property.RootNamespace = QaFullStack
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\User\Documents\QaFullStack\QAFullstack\QaFullStack\
-=======
-build_property.ProjectDir = C:\backend\QAFullstack\QaFullStack\
->>>>>>> 61907817172a741ace3454c1c9aca50b4db9dfe0
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\User\Documents\QaFullStack\QAFullstack\QaFullStack
-=======
-build_property.MSBuildProjectDirectory = C:\backend\QAFullstack\QaFullStack
->>>>>>> 61907817172a741ace3454c1c9aca50b4db9dfe0
 build_property._RazorSourceGeneratorDebug = 
