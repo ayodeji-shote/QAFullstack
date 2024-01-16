@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaFullStack.Model
 {
+    [Table("PROPERTY")]
     public class Property
     {
         [Key]
@@ -18,29 +19,23 @@ namespace QaFullStack.Model
         [Column(TypeName = "nvarchar(9)")]
         [Required]
         public string? TYPE { get; set; }
-        [Column(TypeName = "nvarchar(255)")]
         [Required]
         public int? NUMBER_OF_BEDROOMS { get; set; }
-        [Column(TypeName = "nvarchar(255)")]
         [Required]
         public int? NUMBER_OF_BATHROOMS { get; set; }
-        [Column(TypeName = "nvarchar(255)")]
         [Required]
-        public int? GARDEN { get; set; }
-        [Column(TypeName = "nvarchar(255)")]
+        public bool? GARDEN { get; set; }
         [Required]
         public decimal? PRICE { get; set; }
         [Column(TypeName = "nvarchar(255)")]
         [Required]
-        public decimal? STATUS { get; set; }
-        [Column(TypeName = "nvarchar(255)")]
+        public string? STATUS { get; set; }
         [Required]
         [ForeignKey("SELLER_ID")]
-        public decimal? SELLER_ID { get; set; }
-        [Column(TypeName = "nvarchar(255)")]
+        public int? SELLER_ID { get; set; }
         [Required]
         [ForeignKey("BUYER_ID")]
-        public decimal? BUYER_ID { get; set; }
+        public int? BUYER_ID { get; set; }
 
     }
 }
