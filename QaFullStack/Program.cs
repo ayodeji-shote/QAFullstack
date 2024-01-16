@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EstateDBContext>(options =>
 	options.UseSqlServer(
 		builder.Configuration.GetConnectionString("EstateAgentAppCon2")));
@@ -34,8 +34,8 @@ app.UseCors(MyAllowSpecificOrigins);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+	//app.UseSwagger();
+	//app.UseSwaggerUI();
 }
 
 app.UseAuthorization();
