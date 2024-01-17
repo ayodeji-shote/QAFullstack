@@ -53,11 +53,12 @@ namespace QaFullStack.Controllers
         // POST: BuyersController/Edit/5
         [HttpPut]
         [Route("EditBuyer/{id}")]
-        public ActionResult<Buyer> Edit(int id , Buyer buyer)
+        public ActionResult<Buyer> Edit([FromBody] Buyer buyer)
         {
             if (ModelState.IsValid)
             {
-                _dBContext.Entry(buyer).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                //_dBContext.Entry(buyer).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                _dBContext.Update(buyer);
                 _dBContext.SaveChanges();
                 return new JsonResult("buyer updated successfully");
             }
