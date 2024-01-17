@@ -83,7 +83,8 @@ namespace QaFullStack.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				_dBContext.Entry(seller).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+				//_dBContext.Entry(seller).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+    				_dBContext.Update(seller);
 				_dBContext.SaveChanges();
 				return new JsonResult("Seller updated successfully");
 			}
