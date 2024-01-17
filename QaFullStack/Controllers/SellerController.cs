@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using QaFullStack.EF;
 using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
-    /// <summary>
-    /// SellerController class logic
-    /// </summary>
+	/// <summary>
+	/// SellerController class logic
+	/// </summary>
+	[Authorize]
     public class SellerController : ControllerBase
 	{
 		#region Fieleds
