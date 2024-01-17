@@ -2,7 +2,7 @@
 
 namespace JWTCarsAuth.WebApi.Models
 {
-    [Table("user", Schema = "cardb_jwt")]
+    [Table("user")]
     public class User
     {
         [Column(name: "id")]

@@ -74,6 +74,7 @@ namespace JWTAuth.WebApi.Controllers
                 return BadRequest();
             }
         }
+
         [HttpPost("GenerateToken")]
         public string GenerateJwtToken(User user)
         {

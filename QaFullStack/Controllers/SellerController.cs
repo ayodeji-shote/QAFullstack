@@ -32,6 +32,7 @@ namespace QaFullStack.Controllers
 		/// Get all sellers	
 		/// </summary>
 		/// <returns></returns>
+		[AllowAnonymous]
 		[HttpGet]
 		[Route("GetSellers")]
 		// GET:SellerController
