@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QaFullStack.EF;
 using QaFullStack.Model;
-using System.Text.Json.Serialization;
 
 namespace QaFullStack.Controllers
 {
-
+	[Authorize]
 	public class PropertyController : ControllerBase
 	{
 		private readonly EstateDBContext _dbContext;
@@ -52,8 +52,6 @@ namespace QaFullStack.Controllers
 		[Route("CreateProperty")]
 		public ActionResult<Property> Post([FromBody] Property property)
 		{
-			
-
 			_dbContext.Add(property);
 			_dbContext.SaveChanges();
 
@@ -79,6 +77,7 @@ namespace QaFullStack.Controllers
 			currentproperty.GARDEN = updatedProperty.GARDEN;
 			currentproperty.PRICE = updatedProperty.PRICE;
 			currentproperty.STATUS = updatedProperty.STATUS;
+			currentproperty.SELLER_ID = updatedProperty.SELLER_ID;
 			currentproperty.BUYER_ID = updatedProperty.BUYER_ID;
 
 			_dbContext.SaveChanges();

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JWTCarsAuth.WebApi.Models;
+using Microsoft.EntityFrameworkCore;
 using QaFullStack.Model;
 namespace QaFullStack.EF
 {
@@ -12,5 +13,6 @@ namespace QaFullStack.EF
         public DbSet<Seller> Sellers { get; set; }
         public DbSet<Buyer> Buyers { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+        public virtual DbSet<User>? Users { get; set; }
     }
 }
