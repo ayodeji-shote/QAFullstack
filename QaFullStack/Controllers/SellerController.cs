@@ -60,12 +60,13 @@ namespace QaFullStack.Controllers
 			return seller;
 		}
 
-		/// <summary>
-		/// Create new seller
-		/// </summary>
-		/// <param name="seller"></param>
-		/// <returns></returns>
-		[HttpPost]
+        /// <summary>
+        /// Create new seller
+        /// </summary>
+        /// <param name="seller"></param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpPost]
 		[Route("CreateSeller")]
 		// POST: SellerController/Create
 		public ActionResult CreateSeller([FromBody] Seller seller)
@@ -79,7 +80,8 @@ namespace QaFullStack.Controllers
 			return BadRequest(ModelState);
 		}
 
-		[HttpPut]
+        [Authorize]
+        [HttpPut]
 		[Route("UpdateSeller/{id}")]
 		// PUT: SellerController/Edit
 		public ActionResult UpdateSeller(int id, [FromBody] Seller seller)
@@ -94,7 +96,8 @@ namespace QaFullStack.Controllers
 			return BadRequest(ModelState);
 		}
 
-		[HttpDelete]
+        [Authorize]
+        [HttpDelete]
 		[Route("DeleteSeller/{id}")]
 		// DELETE: SellerController/Delete
 		public ActionResult DeleteSeller(int id)

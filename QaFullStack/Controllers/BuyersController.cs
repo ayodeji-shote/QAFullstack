@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 //using NuGet.Protocol.Plugins;
 using QaFullStack.EF;
@@ -39,6 +40,7 @@ namespace QaFullStack.Controllers
         }
 
         // POST: BuyersController/Create
+        [Authorize]
         [HttpPost]
         [Route("CreateBuyer")]
         public ActionResult<Buyer> Create([FromBody] Buyer bnbuyer)
@@ -51,6 +53,7 @@ namespace QaFullStack.Controllers
 
 
         // POST: BuyersController/Edit/5
+        [Authorize]
         [HttpPut]
         [Route("EditBuyer/{id}")]
         public ActionResult<Buyer> Edit([FromBody] Buyer buyer)
@@ -70,6 +73,7 @@ namespace QaFullStack.Controllers
 
 
         // POST: BuyersController/Delete/5
+        [Authorize]
         [HttpDelete]
         [Route("DeleteBuyer/{id}")]
         public HttpStatusCode Delete(int id)

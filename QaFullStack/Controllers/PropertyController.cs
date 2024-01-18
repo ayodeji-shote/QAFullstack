@@ -6,7 +6,7 @@ using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
-	[Authorize]
+	
 	public class PropertyController : ControllerBase
 	{
 		private readonly EstateDBContext _dbContext;
@@ -48,7 +48,8 @@ namespace QaFullStack.Controllers
 			}
 		}
 
-		[HttpPost]
+        [Authorize]
+        [HttpPost]
 		[Route("CreateProperty")]
 		public ActionResult<Property> Post([FromBody] Property property)
 		{
@@ -58,7 +59,8 @@ namespace QaFullStack.Controllers
 			return CreatedAtAction("Get", new { id = property.Id }, property);
 		}
 
-		[HttpPut]
+        [Authorize]
+        [HttpPut]
 		[Route("EditProperty/{id}")]
 		public ActionResult Put(int id, [FromBody] Property updatedProperty)
 		{
@@ -84,7 +86,8 @@ namespace QaFullStack.Controllers
 			return NoContent();
 		}
 
-		[HttpDelete]
+        [Authorize]
+        [HttpDelete]
 		[Route("DeleteProperty/{id}")]
 		public ActionResult Delete(int id)
 		{
