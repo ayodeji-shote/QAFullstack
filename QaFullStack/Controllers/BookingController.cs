@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using QaFullStack.EF;
 using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
-    /// <summary>
-    /// BookingController class logic
-    /// </summary>
-    public class BookingController : Controller
+	/// <summary>
+	/// BookingController class logic
+	/// </summary>
+	public class BookingController : Controller
 	{
 		#region Fieleds
 		/// <summary>
@@ -80,11 +79,11 @@ namespace QaFullStack.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-			//_dBContext.Entry(booking).State = EntityState.Modified;
-   			_dBContext.Update(booking);
-			_dBContext.SaveChanges();				
+				//_dBContext.Entry(booking).State = EntityState.Modified;
+				_dBContext.Update(booking);
+				_dBContext.SaveChanges();
 			}
-   			return BadRequest(ModelState);
+			return BadRequest(ModelState);
 			//return NoContent();
 		}
 

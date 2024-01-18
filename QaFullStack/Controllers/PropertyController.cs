@@ -36,16 +36,10 @@ namespace QaFullStack.Controllers
 		[Route("GetProperty/{id}")]
 		public ActionResult<Property> Get(int? id)
 		{
-			try
-			{
-				var property = _dbContext.Properties.FirstOrDefault(p => p.Id == id);
-				return property;
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Error fetching properties: {ex.Message}");
-				throw;
-			}
+
+			var property = _dbContext.Properties.Find(id);
+			return property;
+
 		}
 
 		[HttpPost]
@@ -60,35 +54,35 @@ namespace QaFullStack.Controllers
 
 		[HttpPut]
 		[Route("EditProperty/{id}")]
-		public ActionResult Put(int id, [FromBody] Property updatedProperty)
+		public ActionResult<Property> Put([FromBody] Property updatedProperty)
 		{
-			var currentproperty = _dbContext.Properties.FirstOrDefault(p => p.Id == id);
-			if (currentproperty == null)
-			{
-				return NoContent();
-			}
+			/*			var currentproperty = _dbContext.Properties.FirstOrDefault(p => p.Id == id);
+						if (currentproperty == null)
+						{
+							return NoContent();
+						}*/
 
 			// Update the existing property with the data from the request
-			currentproperty.ADDRESS = updatedProperty.ADDRESS;
-			currentproperty.POSTCODE = updatedProperty.POSTCODE;
-			currentproperty.TYPE = updatedProperty.TYPE;
-			currentproperty.NUMBER_OF_BEDROOMS = updatedProperty.NUMBER_OF_BEDROOMS;
-			currentproperty.NUMBER_OF_BATHROOMS = updatedProperty.NUMBER_OF_BATHROOMS;
-			currentproperty.GARDEN = updatedProperty.GARDEN;
-			currentproperty.PRICE = updatedProperty.PRICE;
-			currentproperty.STATUS = updatedProperty.STATUS;
-			currentproperty.SELLER_ID = updatedProperty.SELLER_ID;
-			currentproperty.BUYER_ID = updatedProperty.BUYER_ID;
-
+			/*			currentproperty.ADDRESS = updatedProperty.ADDRESS;
+						currentproperty.POSTCODE = updatedProperty.POSTCODE;
+						currentproperty.TYPE = updatedProperty.TYPE;
+						currentproperty.NUMBER_OF_BEDROOMS = updatedProperty.NUMBER_OF_BEDROOMS;
+						currentproperty.NUMBER_OF_BATHROOMS = updatedProperty.NUMBER_OF_BATHROOMS;
+						currentproperty.GARDEN = updatedProperty.GARDEN;
+						currentproperty.PRICE = updatedProperty.PRICE;
+						currentproperty.STATUS = updatedProperty.STATUS;
+						currentproperty.SELLER_ID = updatedProperty.SELLER_ID;
+						currentproperty.BUYER_ID = updatedProperty.BUYER_ID;*/
+			_dbContext.Update(updatedProperty);
 			_dbContext.SaveChanges();
 			return NoContent();
 		}
 
 		[HttpDelete]
 		[Route("DeleteProperty/{id}")]
-		public ActionResult Delete(int id)
+		public ActionResult<Property> Delete(int id)
 		{
-			var property = _dbContext.Properties.FirstOrDefault(p => p.Id == id);
+			var property = _dbContext.Properties.Find(id);
 			if (property == null)
 			{
 				return NoContent();

@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QaFullStack.EF;
@@ -82,12 +83,12 @@ namespace QaFullStack.Controllers
 		[HttpPut]
 		[Route("UpdateSeller/{id}")]
 		// PUT: SellerController/Edit
-		public ActionResult UpdateSeller(int id, [FromBody] Seller seller)
+		public ActionResult UpdateSeller([FromBody] Seller seller)
 		{
 			if (ModelState.IsValid)
 			{
 				//_dBContext.Entry(seller).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-    				_dBContext.Update(seller);
+				_dBContext.Update(seller);
 				_dBContext.SaveChanges();
 				return new JsonResult("Seller updated successfully");
 			}
