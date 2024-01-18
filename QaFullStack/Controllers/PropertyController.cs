@@ -75,7 +75,7 @@ namespace QaFullStack.Controllers
 						currentproperty.SELLER_ID = updatedProperty.SELLER_ID;
 						currentproperty.BUYER_ID = updatedProperty.BUYER_ID;*/
 			_dbContext.Update(updatedProperty);
-			dbContext.SaveChanges();
+			_dbContext.SaveChanges();
 			return NoContent();
 		}
 
