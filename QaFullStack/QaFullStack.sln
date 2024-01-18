@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaFullStack", "QaFullStack.csproj", "{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QaFullStack", "QaFullStack.csproj", "{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendUnitTests", "..\BackendUnitTests\BackendUnitTests.csproj", "{AFB5B9A8-BDDF-4B14-8BB9-6E9CA751D62A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE8E83C-D176-4309-9C30-77B8FDD2C3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB5B9A8-BDDF-4B14-8BB9-6E9CA751D62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB5B9A8-BDDF-4B14-8BB9-6E9CA751D62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB5B9A8-BDDF-4B14-8BB9-6E9CA751D62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB5B9A8-BDDF-4B14-8BB9-6E9CA751D62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

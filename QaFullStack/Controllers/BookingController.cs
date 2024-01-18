@@ -5,10 +5,10 @@ using QaFullStack.Model;
 
 namespace QaFullStack.Controllers
 {
-    /// <summary>
-    /// BookingController class logic
-    /// </summary>
-    public class BookingController : Controller
+	/// <summary>
+	/// BookingController class logic
+	/// </summary>
+	public class BookingController : Controller
 	{
 		#region Fieleds
 		/// <summary>
@@ -76,15 +76,16 @@ namespace QaFullStack.Controllers
 		[HttpPut]
 		[Route("UpdateBooking/{id}")]
 		// PUT:BookingController/Edit
-		public ActionResult UpdateBooking(int id, [FromBody] Booking booking)
+		public ActionResult UpdateBooking([FromBody] Booking booking)
 		{
-			if (id != booking.Id)
+			if (ModelState.IsValid)
 			{
-				return BadRequest();
+				//_dBContext.Entry(booking).State = EntityState.Modified;
+				_dBContext.Update(booking);
+				_dBContext.SaveChanges();
 			}
-			_dBContext.Entry(booking).State = EntityState.Modified;
-			_dBContext.SaveChanges();
-			return NoContent();
+			return BadRequest(ModelState);
+			//return NoContent();
 		}
 
 		/// <summary>
