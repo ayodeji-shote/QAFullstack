@@ -26,15 +26,9 @@ namespace QaFullStack.Controllers
 		[Route("GetBuyer/{id}")]
 		public ActionResult<Buyer> Details(int id)
 		{
-			try
-			{
-				var buyer = _dBContext.Buyers.Find(id);
-				return buyer;
-			}
-			catch
-			{
-				return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
-			}
+
+			var buyer = _dBContext.Buyers.Find(id);
+			return buyer;
 		}
 
 		// POST: BuyersController/Create

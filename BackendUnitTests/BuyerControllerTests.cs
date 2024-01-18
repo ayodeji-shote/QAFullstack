@@ -213,9 +213,10 @@ namespace BackendUnitTests
 				buyer.PHONE = "Phone2";
 
 				//Act
-				//downnload all buyers from the datbase
+				//update the row in the DB
 				controller.Edit(buyer);
 
+				//download object for comaprison
 				Buyer comparison = controller.Details(2).Value;
 
 				//Assert
@@ -260,8 +261,10 @@ namespace BackendUnitTests
 				var controller = new BuyersController(context);
 
 				//Act
-				//downnload all buyers from the datbase
+				//remove the row in the DB
 				controller.Delete(2);
+
+				//download the objects from the DB
 				List<Buyer> buyers = controller.Index().Value.ToList();
 
 				//Assert
