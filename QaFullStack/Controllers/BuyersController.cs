@@ -41,9 +41,9 @@ namespace QaFullStack.Controllers
         // POST: BuyersController/Create
         [HttpPost]
         [Route("CreateBuyer")]
-        public ActionResult<Buyer> Create(Buyer bnbuyer)
+        public ActionResult<Buyer> Create([FromBody] Buyer bnbuyer)
         {
-           _dBContext.Buyers.Add(bnbuyer);
+           _dBContext.Add(bnbuyer);
             _dBContext.SaveChanges();
             return CreatedAtAction(nameof(Details), new { id = bnbuyer.Id }, bnbuyer);
         }
