@@ -26,8 +26,7 @@ namespace QaFullStack.Controllers
 		[Route("GetBuyer/{id}")]
 		public ActionResult<Buyer> Details(int id)
 		{
-
-			var buyer = _dBContext.Buyers.Find(id);
+  		var buyer = _dBContext.Buyers.Find(id);
 			return buyer;
 		}
 

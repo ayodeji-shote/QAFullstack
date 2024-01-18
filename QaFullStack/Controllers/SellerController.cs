@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using QaFullStack.EF;
 using QaFullStack.Model;
 
@@ -8,7 +9,8 @@ namespace QaFullStack.Controllers
 	/// <summary>
 	/// SellerController class logic
 	/// </summary>
-	public class SellerController : ControllerBase
+	[Authorize]
+    public class SellerController : ControllerBase
 	{
 		#region Fieleds
 		/// <summary>
@@ -31,6 +33,7 @@ namespace QaFullStack.Controllers
 		/// Get all sellers	
 		/// </summary>
 		/// <returns></returns>
+		[AllowAnonymous]
 		[HttpGet]
 		[Route("GetSellers")]
 		// GET:SellerController
