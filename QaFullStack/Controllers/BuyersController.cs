@@ -41,8 +41,6 @@ namespace QaFullStack.Controllers
 			return CreatedAtAction(nameof(Details), new { id = bnbuyer.Id }, bnbuyer);
 		}
 
-
-
 		// POST: BuyersController/Edit/5
 		[HttpPut]
 		[Route("EditBuyer/{id}")]
@@ -56,11 +54,7 @@ namespace QaFullStack.Controllers
 				return new JsonResult("buyer updated successfully");
 			}
 			return BadRequest(ModelState);
-
-
-		}
-
-
+     }
 
 		// POST: BuyersController/Delete/5
 		[HttpDelete]

@@ -18,7 +18,7 @@ namespace QaFullStack.Model
 		[Required]
 		public string? POSTCODE { get; set; }
 		[Column(TypeName = "nvarchar(9)")]
-		[Required]
+		//[Required]
 		public string? TYPE { get; set; }
 		[Required]
 		public int? NUMBER_OF_BEDROOMS { get; set; }
@@ -34,7 +34,7 @@ namespace QaFullStack.Model
 		[Required]
 		[ForeignKey("SELLER_ID")]
 		public int? SELLER_ID { get; set; }
-		[Required]
+		
 		[ForeignKey("BUYER_ID")]
 		public int? BUYER_ID { get; set; }
 
