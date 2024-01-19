@@ -42,12 +42,13 @@ namespace QaFullStack.Controllers
 			return sellers;
 		}
 
-		/// <summary>
-		/// Get seller by id
-		/// </summary>
-		/// <param name="id"></param>
-		/// <returns></returns>
-		[HttpGet]
+        /// <summary>
+        /// Get seller by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpGet]
 		[Route("GetSeller/{id}")]
 		//GET: SellerController/Details
 		public ActionResult<Seller> GetSeller(int id)
@@ -65,7 +66,6 @@ namespace QaFullStack.Controllers
         /// </summary>
         /// <param name="seller"></param>
         /// <returns></returns>
-        [AllowAnonymous]
         [HttpPost]
 		[Route("CreateSeller")]
 		// POST: SellerController/Create
