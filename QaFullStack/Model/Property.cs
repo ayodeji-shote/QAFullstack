@@ -31,7 +31,7 @@ namespace QaFullStack.Model
 		[Column(TypeName = "nvarchar(255)")]
 		[Required]
 		public string? STATUS { get; set; }
-		[Required]
+		
 		[ForeignKey("SELLER_ID")]
 		public int? SELLER_ID { get; set; }
 		

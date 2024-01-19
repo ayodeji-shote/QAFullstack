@@ -66,6 +66,7 @@ namespace QaFullStack.Controllers
         /// </summary>
         /// <param name="seller"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
 		[Route("CreateSeller")]
 		// POST: SellerController/Create
